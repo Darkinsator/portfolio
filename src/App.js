@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
 import AboutMe from './AboutMe';
+import GifRedirect from './GifRedirect'; // Import the GifRedirect component
 import './index.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
+            <Route path="/gif-redirect" element={<GifRedirect />} />
             {/* Add more routes here if needed */}
           </Routes>
         </div>
