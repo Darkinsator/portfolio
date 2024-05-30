@@ -11,6 +11,9 @@ const AboutMe = () => {
                 </div>
       
       {/* Add more about me content here */}
+      <div className="small">
+                    <img src="/image1.png" alt="python"/>
+                </div>
     </div>
   );
 };

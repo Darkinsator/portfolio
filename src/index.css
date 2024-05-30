@@ -162,6 +162,12 @@ footer {
   position: center;
 }
 
+.small img{
+  width: 200px;
+  height: 100px;
+  position: center;
+}
+
 .back-to-top img:hover {
   transform: translateY(-10px);
 }
