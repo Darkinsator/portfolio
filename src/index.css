@@ -196,3 +196,52 @@ footer {
   height: 1100px;
 }
 
+.contact-me {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-me h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-me form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-me label {
+  margin-bottom: 5px;
+}
+
+.contact-me input,
+.contact-me textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-me button {
+  padding: 10px;
+  background-color: #345eeb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-me button:hover {
+  background-color: #2a47c8;
+}
+
+.confirmation {
+  text-align: center;
+  margin-top: 20px;
+  color: green;
+}
