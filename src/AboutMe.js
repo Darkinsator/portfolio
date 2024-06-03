@@ -12,22 +12,25 @@ const AboutMe = () => {
                 </div>
       
       {/* Add more about me content here */}
-      <div className="small">
-                    
-                    <img style= {{height: "100px", width: "100px"}} src="/csharp.jpg" alt="C#"/>
-                    <img style= {{height: "100px", width: "130px"}} src="/CSS3.jpg" alt="C#"/>
-                    <img style= {{height: "100px", width: "100px"}} src="/html.jpg" alt="C#"/>
-                    <img style= {{height: "100px", width: "100px"}} src="/JavaScript.jpg" alt="C#"/>                 
-                    <img style= {{height: "100px", width: "100px"}} src="/node.jpg" alt="C#"/>
-                    <img style= {{height: "100px", width: "100px"}} src="/python.jpg" alt="C#"/>
-                    <img style= {{height: "100px", width: "100px"}} src="/react.jpg" alt="C#"/>
-                    <img style= {{height: "100px", width: "100px"}} src="/mysql.jpg" alt="C#"/>
-                    <img style= {{height: "100px", width: "100px"}} src="/Kotlin.jpg" alt="C#"/>
-                    <img style= {{height: "100px", width: "100px"}} src="/java.jpg" alt="C#"/>
-                    <img style= {{height: "100px", width: "60px"}} src="/php.jpg" alt="C#"/>
+      <div className="icons">
+                <p align="center">
+                  <a href="https://skillicons.dev">
 
-                </div>
+                    <p>Known programming Languages</p>
+                    <img src="https://skillicons.dev/icons?i=cs,css,html,java,js,kotlin,nodejs,php,py,react,ts,mysql" 
+                         alt="Programming languages: C#, CSS, HTML, Java, JavaScript, Kotlin, Node.js, PHP, Python, React, TypeScript, MySQL"
+                         
+                    />
 
+                    <p>Known IDE's, packages and version control software</p>
+                    <img src="https://skillicons.dev/icons?i=github,git,azure,bootstrap,dotnet,firebase,godot,mongodb,netlify,vscode" 
+                         alt="Tools: GitHub, Git, Azure, Bootstrap, .NET, Firebase, Godot, MongoDB, Netlify, VS Code" 
+                         
+                         
+                    />
+                  </a>
+                </p>
+      </div>
     </div>
   );
 };
