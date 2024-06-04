@@ -1,50 +1,30 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 const ContactMe = () => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [isSent, setIsSent] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-      from_email: email,
-      message: message,
-    }, 'YOUR_USER_ID')
-      .then((result) => {
-        console.log(result.text);
-        setIsSent(true);
-        setEmail('');
-        setMessage('');
-      }, (error) => {
-        console.log(error.text);
-      });
-  };
-
+  
+  
   return (
-    <div className="contact-me">
-      <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Email Address:</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <label>Message:</label>
-        <textarea
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          required
-        />
-        <button type="submit">Send</button>
-      </form>
-      {isSent && <p className="confirmation">Your message has been sent successfully!</p>}
+    <div class="container">
+  <h1>FormSubmit Demo</h1>
+  <form target="_blank" action="https://formsubmit.co/66529c23ef5286501573c84bbf8c6b70" method="POST">
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required/>
+        </div>
+        <div class="col">
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required/>
+        </div>
+      </div>
     </div>
+    <div class="form-group">
+      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+  </form>
+</div>
   );
 };
 
