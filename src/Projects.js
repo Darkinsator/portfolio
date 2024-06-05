@@ -6,15 +6,14 @@ const Projects = () => {
     
     return (
         <div className="projects">
-        <h2>Homepage</h2>
+        <h2>My Projects</h2>
         <header className="App-header">
-            <h1>My Portfolio</h1>
-            <p>Welcome to my portfolio website!</p>
+            
             
         </header>
         <main>
             <section className="projects">
-                <h2>My Projects</h2>
+                
                 <div className="project">
                     <h3>Paragon Master Builders Website</h3>
                     <p>Created a HTML, CSS, JS website for a construction company.</p>
