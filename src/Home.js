@@ -30,6 +30,7 @@ const Home = () => {
             <header className="App-header">
                 <h1>My Portfolio</h1>
                 <p>Welcome to my portfolio website!</p>
+                
                 <TypeAnimation
                     sequence={[
                         'I am a Web Developer',
