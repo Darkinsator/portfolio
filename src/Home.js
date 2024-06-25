@@ -49,7 +49,7 @@ const Home = () => {
                 />
             </header>
             <main>
-                <section className="projects">
+                <section className="homeprojects">
                     <h2>My Projects</h2>
                     <div className="project">
                         <h3>Paragon Master Builders Website</h3>
