@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import './index.css';
+import portrait from '../public/jasonimg.jpeg'; // Make sure to replace with the actual path to your image
 
 const Home = () => {
     const [showButton, setShowButton] = useState(false);
@@ -30,23 +31,25 @@ const Home = () => {
             <header className="App-header">
                 <h1>My Portfolio</h1>
                 <p>Welcome to my portfolio website!</p>
-                
-                <TypeAnimation
-                    sequence={[
-                        'I am a Web Developer',
-                        2000, 
-                        'I am an Application Developer',
-                        2000,
-                        'I am a Full Stack Developer',
-                        2000,
-                        'I am a YORU GAMER!',
-                        2000,
-                    ]}
-                    wrapper="span"
-                    speed={50}
-                    style={{ fontSize: '1.5em', display: 'block', marginTop: '20px', color: '#db1414' }}
-                    repeat={Infinity}
-                />
+                <div className="type-animation-container">
+                    <TypeAnimation
+                        sequence={[
+                            'I am a Web Developer',
+                            2000, 
+                            'I am an Application Developer',
+                            2000,
+                            'I am a Full Stack Developer',
+                            2000,
+                            'I am a YORU GAMER!',
+                            2000,
+                        ]}
+                        wrapper="span"
+                        speed={50}
+                        style={{ fontSize: '1.5em', display: 'block', marginTop: '20px', color: '#db1414' }}
+                        repeat={Infinity}
+                    />
+                    <img src={portrait} alt="Portrait" className="portrait-image" />
+                </div>
             </header>
             <main>
                 <section className="homeprojects">
