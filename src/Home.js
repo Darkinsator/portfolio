@@ -31,7 +31,7 @@ const Home = () => {
                 <h1>My Portfolio</h1>
                 <p>Welcome to my portfolio website!</p>
                 <div className="type-animation-container">
-                <img src={`${process.env.PUBLIC_URL}/jasonimg.jpeg`} alt="Portrait of the developer" className="portrait-image" />
+                
                     <TypeAnimation
                         sequence={[
                             'I am a Web Developer',
