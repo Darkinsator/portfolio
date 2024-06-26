@@ -245,6 +245,13 @@ footer {
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: #888; /* Set background color to gray */
+  color: #fff; /* Set text color to white */
+}
+
+.contact-me input::placeholder,
+.contact-me textarea::placeholder {
+  color: #888; /* Placeholder text color */
 }
 
 .contact-me button {
