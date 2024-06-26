@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import './index.css';
-import portrait from '../public/jasonimg.jpeg'; // Make sure to replace with the actual path to your image
 
 const Home = () => {
     const [showButton, setShowButton] = useState(false);
@@ -32,10 +31,11 @@ const Home = () => {
                 <h1>My Portfolio</h1>
                 <p>Welcome to my portfolio website!</p>
                 <div className="type-animation-container">
+                <img src={`${process.env.PUBLIC_URL}/jasonimg.jpeg`} alt="Portrait of the developer" className="portrait-image" />
                     <TypeAnimation
                         sequence={[
                             'I am a Web Developer',
-                            2000, 
+                            2000,
                             'I am an Application Developer',
                             2000,
                             'I am a Full Stack Developer',
@@ -48,7 +48,7 @@ const Home = () => {
                         style={{ fontSize: '1.5em', display: 'block', marginTop: '20px', color: '#db1414' }}
                         repeat={Infinity}
                     />
-                    <img src={portrait} alt="Portrait" className="portrait-image" />
+                    
                 </div>
             </header>
             <main>
