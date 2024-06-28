@@ -15,15 +15,15 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <h1 className="sarpanch-font">JASON BLANKENBERG</h1>
+        <h1 className="navbarheader">JASON BLANKENBERG</h1>
         <div className="links">
-          <Link to="/">Home</Link>
-          <Link to="/gif-redirect">About Me</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact Me</Link> {/* New link */}
+          <Link className="goldman" to="/">Home</Link>
+          <Link className="goldman" to="/about">About Me</Link>
+          <Link className="goldman" to="/projects">Projects</Link>
+          <Link className="goldman" to="/contact">Contact Me</Link> {/* New link */}
         </div>
         <button className="gif-button" onClick={handleGifClick}>
-          <img src={`${process.env.PUBLIC_URL}/icon.png`} alt="Play GIF" />
+          <img src={`${process.env.PUBLIC_URL}/tech.png`} alt="Play GIF" />
         </button>
       </nav>
       {showGif && (

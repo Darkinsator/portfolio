@@ -15,27 +15,27 @@ const Projects = () => {
             <section className="projects">
                 
                 <div className="project">
-                    <h3>Paragon Master Builders Website</h3>
+                    <h3 className="goldman">Paragon Master Builders Website</h3>
                     <p>Created a HTML, CSS, JS website for a construction company.</p>
                     <a href="https://github.com/Darkinsator/ParagonMB">View Project</a>
                 </div>
                 <div className="project">
-                    <h3>Birdinator Mobile Application</h3>
+                    <h3 className="goldman" >Birdinator Mobile Application</h3>
                     <p>Created a bird finder application, in a team of 3 with kotlin.</p>
                     <a href="https://github.com/DeCharter/OPSC_POE_App">View Project</a>
                 </div>
                 <div className="project">
-                    <h3>NGO Web application</h3>
+                    <h3 className="goldman">NGO Web application</h3>
                     <p>Created a NGO web application where Customers can make donations, in a team of 2.</p>
                     <a href="https://github.com/Yummy07K/XISDWebApplication">View Project</a>
                 </div>
                 <div className="project">
-                    <h3>Public participation platform web application</h3>
+                    <h3 className="goldman">Public participation platform web application</h3>
                     <p>Created public participation web application at a the first inaugural city of cape town hackathon, in a team of 6.</p>
                     <a href="https://github.com/MogammadShaqeelless16/UVU-AfricaHackathon">View Project</a>
                 </div>
                 <div className="project">
-                    <h3>NGO web application and mobile application</h3>
+                    <h3 className="goldman">NGO web application and mobile application</h3>
                     <p>Created a web application and mobile application demo for the hidden treasures NGO, in a team of 3.</p>
                     <a href="https://github.com/DeCharter/XISD_MobileApplication">View Project</a>
                 </div>
