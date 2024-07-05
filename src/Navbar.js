@@ -21,6 +21,7 @@ const Navbar = () => {
           <Link className="goldman" to="/about">About Me</Link>
           <Link className="goldman" to="/projects">Projects</Link>
           <Link className="goldman" to="/contact">Contact Me</Link> {/* New link */}
+          <Link className="goldman" to="/skills">Skills</Link>
         </div>
         <button className="gif-button" onClick={handleGifClick}>
           <img src={`${process.env.PUBLIC_URL}/tech.png`} alt="Play GIF" />

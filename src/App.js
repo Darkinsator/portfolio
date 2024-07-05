@@ -6,6 +6,7 @@ import AboutMe from './AboutMe';
 import GifRedirect from './GifRedirect'; // Import the GifRedirect component
 import ContactMe from './ContactMe'; // Import the ContactMe component
 import Projects from './Projects';
+import Skills from './Skills';
 import './index.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/projects" element={<Projects/>}/>
             <Route path="/gif-redirect" element={<GifRedirect />} />
             <Route path="/contact" element={<ContactMe />} /> {/* New route */}
+            <Route path="/skills" element={<Skills/>} />
             {/* Add more routes here if needed */}
           </Routes>
         </div>
