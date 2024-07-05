@@ -15,7 +15,7 @@ const FlipCard = ({ skill }) => {
                     <img src="/Back Card.png" alt="Card Back" />
                 </div>
                 <div className="flip-card-back">
-                    <h2>{skill}</h2>
+                    <img src={`/${skill}.jpeg`} alt={`${skill} Card`} />
                 </div>
             </div>
         </div>
