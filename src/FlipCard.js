@@ -8,8 +8,12 @@ const FlipCard = ({ skill }) => {
         setIsFlipped(true);
     }, []);
 
+    const handleClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+
     return (
-        <div className={`flip-card ${isFlipped ? 'flipped' : ''}`}>
+        <div className={`flip-card ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
             <div className="flip-card-inner">
                 <div className="flip-card-front">
                     <img src="/Back Card.png" alt="Card Back" />

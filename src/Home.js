@@ -26,7 +26,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <h2>Homepage</h2>
+            
             <header className="App-header">
                 <h1>My Portfolio</h1>
                 <p>Welcome to my portfolio website!</p>
@@ -53,7 +53,7 @@ const Home = () => {
             </header>
             <main>
                 <section className="homeprojects">
-                    <h2>My Projects</h2>
+                    
                     <div className="project">
                         <h3>Paragon Master Builders Website</h3>
                         <p>Created a HTML, CSS, JS website for a construction company.</p>

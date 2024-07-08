@@ -367,6 +367,7 @@ h1 {
   height: 300px;
   perspective: 1000px;
   margin: 20px;
+  cursor: pointer; /* Add cursor pointer for better UX */
 }
 
 .flip-card-inner {

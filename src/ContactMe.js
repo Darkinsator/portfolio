@@ -8,7 +8,7 @@ const ContactMe = () => {
   return (
     <div class="container">
       <h1>FormSubmit Demo</h1>
-      <form target="_blank" action="https://formsubmit.co/66529c23ef5286501573c84bbf8c6b70" method="POST">
+      <form target="_blank" action="https://formsubmit.co/c9088f97eddf51fd5e40a353dbad906c" method="POST">
         <div class="form-group">
           <div class="form-row">
             <div class="col">
