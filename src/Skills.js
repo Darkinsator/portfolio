@@ -3,7 +3,7 @@ import FlipCard from './FlipCard';
 import './index.css';
 
 const Skills = () => {
-    const skills = ["JavaScript", "React", "CSS", "HTML", "Node.js", "C#" ];
+    const skills = ["JavaScript", "React", "CSS", "HTML", "Node.js", "Csharp" ];
 
     return (
         <div className="skills-container">
