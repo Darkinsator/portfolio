@@ -123,6 +123,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  background-image: url('../public/firewallbackground.jpg');
 }
 
 .project h3 {
@@ -177,11 +178,14 @@ footer {
 }
 
 .sized img {
+  vertical-align: middle;
   width: 300px;
-  height: 360px;
-  position: center;
-  padding-top: 50px;
-  padding-left: 50px;
+  height: 300px;
+  border-radius: 50%;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-bottom: 25px;
+  padding-right: 25px;
 }
 
 .small img {

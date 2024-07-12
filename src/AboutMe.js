@@ -1,8 +1,33 @@
-import React from 'react';
 import './index.css';
+import React, { useState, useEffect } from 'react';
+
+
+
 
 
 const AboutMe = () => {
+
+  const [showButton, setShowButton] = useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            setShowButton(true);
+        } else {
+            setShowButton(false);
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
   return (
     <div className="about">
       <h2>About Me</h2>
@@ -35,6 +60,11 @@ const AboutMe = () => {
       <footer>
         <p>© 2024 My Portfolio</p>
       </footer>
+      {showButton && (
+                <button className="back-to-top" onClick={scrollToTop}>
+                    <img src="/linkarrow.png" alt="Back to Top" />
+                </button>
+            )}
     </div>
   );
 };

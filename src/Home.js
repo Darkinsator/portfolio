@@ -26,12 +26,12 @@ const Home = () => {
 
     return (
         <div className="home">
-            
+
             <header className="App-header">
                 <h1>My Portfolio</h1>
                 <p>Welcome to my portfolio website!</p>
                 <div className="type-animation-container">
-                
+
                     <TypeAnimation
                         sequence={[
                             'I am a Web Developer',
@@ -48,12 +48,12 @@ const Home = () => {
                         style={{ fontSize: '1.5em', display: 'block', marginTop: '20px', color: '#db1414' }}
                         repeat={Infinity}
                     />
-                    
+
                 </div>
             </header>
             <main>
                 <section className="homeprojects">
-                    
+
                     <div className="project">
                         <h3>Paragon Master Builders Website</h3>
                         <p>Created a HTML, CSS, JS website for a construction company.</p>
