@@ -31,7 +31,7 @@ body {
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   border-bottom: 1px solid #ccc;
   background-color: #fff;
@@ -66,7 +66,7 @@ body {
 /* Content styles */
 .content {
 
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 40px auto;
   padding: 20px;
   background-color: #333;
@@ -121,7 +121,7 @@ body {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: transform 0.3s ease;
   background-image: url('../public/firewallbackground.jpg');
 }
@@ -178,13 +178,14 @@ footer {
 }
 
 .sized img {
+  
   vertical-align: middle;
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  padding-top: 25px;
+  padding-top: 5px;
   padding-left: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 5px;
   padding-right: 25px;
 }
 

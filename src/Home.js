@@ -38,9 +38,7 @@ const Home = () => {
                             2000,
                             'I am an Application Developer',
                             2000,
-                            'I am a Full Stack Developer',
-                            2000,
-                            'I am a YORU GAMER!',
+                            'I am a Full Stack Developer',                           
                             2000,
                         ]}
                         wrapper="span"
