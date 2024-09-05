@@ -48,6 +48,9 @@ const Home = () => {
                     />
 
                 </div>
+                <a href="/JASONBLANKENBERGCV.pdf" download className="download-cv-button">
+                    Download My CV
+                </a>
             </header>
             <main>
                 <section className="homeprojects">
