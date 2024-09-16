@@ -23,9 +23,9 @@ const Navbar = () => {
           <Link className="goldman" to="/contact">Contact Me</Link> {/* New link */}
           <Link className="goldman" to="/skills">Skills</Link>
         </div>
-        <button className="gif-button" onClick={handleGifClick}>
-          <img src={`${process.env.PUBLIC_URL}/tech.png`} alt="Play GIF" />
-        </button>
+        {/* <button className="gif-button" onClick={handleGifClick}> */}
+          {/* <img src={`${process.env.PUBLIC_URL}/tech.png`} alt="Play GIF" /> */}
+        {/* </button> */}
       </nav>
       {showGif && (
         <div className="gif-overlay" onClick={() => setShowGif(false)}>

@@ -27,8 +27,9 @@ const ContactMe = () => {
 
 
   return (
-    <div class="container">
-      <h1>FormSubmit Demo</h1>
+    <div class="contact-me">
+      <h1>Contact Me</h1>
+      <h2>Send me an email to get in contact.</h2>
       <form target="_blank" action="https://formsubmit.co/c9088f97eddf51fd5e40a353dbad906c" method="POST">
         <div class="form-group">
           <div class="form-row">

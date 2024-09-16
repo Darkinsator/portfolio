@@ -32,12 +32,14 @@ const Skills = () => {
     return (
         <main>
             <div className="skills-container">
+                <div>
                 <h2>My Skills</h2>
+                </div><br></br>
                 <div className="skills-grid">
                     {skills.map((skill, index) => (
                         <FlipCard key={index} skill={skill} />
                     ))}
-                </div>
+                </div><br></br>
             </div>
             <footer>
                 <p>© 2024 My Portfolio</p>
