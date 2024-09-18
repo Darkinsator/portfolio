@@ -1,8 +1,25 @@
+// Home.js
+
 import React, { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import './index.css';
+import HexagonGrid from './HexagonGrid';
+import './index.css'; // Make sure this includes styles for your content
 
 const Home = () => {
+
+    useEffect(() => {
+        const cursor = document.querySelector('.cursor');
+        const handleMouseMove = (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
     const [showButton, setShowButton] = useState(false);
 
     const handleScroll = () => {
@@ -25,20 +42,20 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="home">
+        <div style={{ position: 'relative' }}>
+            <HexagonGrid />
 
             <header className="App-header">
                 <h1>My Portfolio</h1>
                 <p>Welcome to my portfolio website!</p>
                 <div className="type-animation-container">
-
                     <TypeAnimation
                         sequence={[
                             'I am a Web Developer',
                             2000,
                             'I am an Application Developer',
                             2000,
-                            'I am a Full Stack Developer',                           
+                            'I am a Full Stack Developer',
                             2000,
                         ]}
                         wrapper="span"
@@ -46,31 +63,15 @@ const Home = () => {
                         style={{ fontSize: '1.5em', display: 'block', marginTop: '20px', color: '#db1414' }}
                         repeat={Infinity}
                     />
-
                 </div>
                 <a href="/JASONBLANKENBERGCV.pdf" download className="download-cv-button">
                     Download My CV
                 </a>
             </header>
-            <main>
-                <section className="homeprojects">
 
-                    <div className="project">
-                        <h3>Paragon Master Builders Website</h3>
-                        <p>Created a HTML, CSS, JS website for a construction company.</p>
-                        <a href="https://github.com/Darkinsator/ParagonMB">View Project</a>
-                    </div>
-                    <div className="project">
-                        <h3>Birdinator Mobile Application</h3>
-                        <p>Created a bird finder application in a team of 3 with kotlin.</p>
-                        <a href="https://github.com/DeCharter/OPSC_POE_App">View Project</a>
-                    </div>
-                    {/* Add more projects here */}
-                </section>
-            </main>
-            <footer>
-                <p>© 2024 My Portfolio</p>
-            </footer>
+            {/* <footer> */}
+                {/* <p>© 2024 My Portfolio</p> */}
+            {/* </footer> */}
             {showButton && (
                 <button className="back-to-top" onClick={scrollToTop}>
                     <img src="/linkarrow.png" alt="Back to Top" />
