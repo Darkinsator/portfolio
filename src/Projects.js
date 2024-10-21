@@ -46,6 +46,7 @@ const Projects = () => {
             <HexagonGrid />
             <h2>My Projects</h2>
             
+            
             <main>
                 <section className="projects">
 

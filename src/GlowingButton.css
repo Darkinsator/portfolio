@@ -51,32 +51,33 @@
 }
 
 .glowing-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.7;
-  filter: blur(1em);
-  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
-  background: var(--glow-color);
-  pointer-events: none;
-}
-
-.glowing-btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  z-index: -1;
-  background-color: var(--glow-color);
-  box-shadow: 0 0 2em 0.2em var(--glow-color);
-  transition: opacity 100ms linear;
-}
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.9;  /* Increase opacity */
+    filter: blur(2em);  /* Increase blur to extend glow */
+    transform: translateY(150%) rotateX(95deg) scale(1, 0.45); /* Adjust transform to push the light further down */
+    background: var(--glow-color);
+    pointer-events: none;
+    z-index: -2; /* Make sure it's behind the button */
+  }
+  
+  .glowing-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 3em 0.4em var(--glow-color);  /* Increase the spread of the box shadow */
+    transition: opacity 100ms linear;
+  }
 
 .glowing-btn:hover {
   color: rgba(0, 0, 0, 0.8);

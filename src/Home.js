@@ -6,6 +6,7 @@ import HexagonGrid from './HexagonGrid';
 import './index.css'; // Make sure this includes styles for your content
 import GlowingButton from './GlowingButton';
 
+
 const Home = () => {
 
     useEffect(() => {
@@ -50,9 +51,11 @@ const Home = () => {
       };
 
     return (
+       
         <div style={{ position: 'relative' }}>
-            <HexagonGrid />
 
+            <HexagonGrid />
+            
             <header className="App-header">
                 <h1>My Portfolio</h1>
                 <p>Welcome to my portfolio website!</p>
@@ -73,10 +76,12 @@ const Home = () => {
                     />
                 </div>
                 <br></br>
-                <a>
-                <GlowingButton handleClick={downloadPDF} />        
-                </a>            
+            <GlowingButton handleClick={downloadPDF} />   
+                
+                     
+                            
             </header>
+            
 
             {/* <footer> */}
                 {/* <p>© 2024 My Portfolio</p> */}
@@ -87,8 +92,8 @@ const Home = () => {
                 </button>
                 
             )}
-            
         </div>
+       
     );
 };
 
