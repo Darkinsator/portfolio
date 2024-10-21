@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import HexagonGrid from './HexagonGrid';
 import './index.css'; // Make sure this includes styles for your content
+import GlowingButton from './GlowingButton';
 
 const Home = () => {
 
@@ -41,6 +42,13 @@ const Home = () => {
         };
     }, []);
 
+    const downloadPDF = () => {
+        const link = document.createElement('a');
+        link.href = '/JASONBLANKENBERGCV.pdf'; // Replace with your PDF path
+        link.download = 'JASONBLANKENBERGCV.pdf'; // The name of the file
+        link.click();
+      };
+
     return (
         <div style={{ position: 'relative' }}>
             <HexagonGrid />
@@ -64,9 +72,10 @@ const Home = () => {
                         repeat={Infinity}
                     />
                 </div>
-                <a href="/JASONBLANKENBERGCV.pdf" download className="download-cv-button">
-                    Download My CV
-                </a>
+                <br></br>
+                <a>
+                <GlowingButton handleClick={downloadPDF} />        
+                </a>            
             </header>
 
             {/* <footer> */}
@@ -76,7 +85,9 @@ const Home = () => {
                 <button className="back-to-top" onClick={scrollToTop}>
                     <img src="/linkarrow.png" alt="Back to Top" />
                 </button>
+                
             )}
+            
         </div>
     );
 };

@@ -4,6 +4,57 @@
 
 @import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
 @import url('https://fonts.googleapis.com/css?family=Kanit:800');  
+
+
+
+
+
+
+
+
+
+
+
+.picture-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.picture-links a {
+  display: inline-block;
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+}
+
+.picture-links img {
+  width: 150%; /* Scale image to fill the button */
+  height: 150%; /* Scale image to fill the button */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 0; /* Optional: Make circular */
+  border: 2px solid #ddd; /* Optional: Add border */
+  transition: transform 0.3s ease-in-out;
+}
+
+.picture-links img:hover {
+  transform: scale(1.1); /* Zoom effect */
+  border-color: #000; /* Border color change on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :root {
   --f-size: 15;
   --f-unit: 1vmin;
@@ -227,7 +278,7 @@ body {
 
 
 .about {
-  background-image: url('../public/firewallbackdiv.jpg');
+  
 }
 
 /* Navbar styles */

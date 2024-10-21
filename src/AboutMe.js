@@ -1,11 +1,25 @@
 import './index.css';
 import React, { useState, useEffect } from 'react';
+import HexagonGrid from './HexagonGrid';
 
 
 
 
 
 const AboutMe = () => {
+
+  useEffect(() => {
+    const cursor = document.querySelector('.cursor');
+    const handleMouseMove = (e) => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+    };
+}, []);
 
   const [showButton, setShowButton] = useState(false);
 
@@ -30,6 +44,7 @@ const AboutMe = () => {
 
   return (
     <div className="about">
+      <HexagonGrid />
       <h2>About Me</h2>
       <p>Hello! I'm Jason Blankenberg, a passionate developer with experience in web and mobile applications...</p>
       <div className="sized">

@@ -1,10 +1,24 @@
 import './index.css';
+import HexagonGrid from './HexagonGrid';
 import React, { useState, useEffect } from 'react';
 
 
 
 
 const Projects = () => {
+
+    useEffect(() => {
+        const cursor = document.querySelector('.cursor');
+        const handleMouseMove = (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        };
+    
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
 
     const [showButton, setShowButton] = useState(false);
 
@@ -29,6 +43,7 @@ const Projects = () => {
 
     return (
         <div>
+            <HexagonGrid />
             <h2>My Projects</h2>
             
             <main>

@@ -52,7 +52,7 @@
   left: 50%;
   width: 400px;
   height: 400px;
-  background: #0f0;
+  background: #1af0dc;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: anim 4s linear infinite;
@@ -61,10 +61,10 @@
 
 @keyframes anim {
   0% {
-    filter: hue-rotate(0deg) blur(50px);
+    filter: blur(50px);
   }
   100% {
-    filter: hue-rotate(360deg) blur(50px);
+    filter: blur(50px);
   }
 }
 /* Responsive adjustments */
