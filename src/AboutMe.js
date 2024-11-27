@@ -1,7 +1,7 @@
 import './index.css';
 import React, { useState, useEffect } from 'react';
 import HexagonGrid from './HexagonGrid';
-
+import './glitch.css'
 
 
 
@@ -45,7 +45,7 @@ const AboutMe = () => {
   return (
     <div className="about">
       <HexagonGrid />
-      <h2>About Me</h2>
+      <h1 className="glitch-animation" data-text="ABOUT ME"> ABOUT ME</h1>
       <p>Hello! I'm Jason Blankenberg, a passionate developer with experience in web and mobile applications...</p>
       <div className="sized">
         <img src="/profilePhoto.jpeg" alt="Back to Top" />

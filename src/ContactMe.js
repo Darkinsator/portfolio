@@ -1,8 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HexagonGrid from './HexagonGrid';
 import './index.css';
+import './glitch.css';
 
 const ContactMe = () => {
+
+  useEffect(() => {
+    const cursor = document.querySelector('.cursor');
+    const handleMouseMove = (e) => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   const [showButton, setShowButton] = useState(false);
 
@@ -26,8 +41,12 @@ const ContactMe = () => {
   }, []);
 
   return (
+
+  <div>
+    <HexagonGrid />
+
     <div className="contact-me">
-      <h1>Contact Me</h1>
+    <h1 className="glitch-animation" data-text="CONTACT ME">CONTACT ME</h1>
       <h2>Send me an email to get in contact.</h2>
       <form target="_blank" action="https://formsubmit.co/c9088f97eddf51fd5e40a353dbad906c" method="POST">
         <div className="form-group">
@@ -61,9 +80,7 @@ const ContactMe = () => {
         </a>
       </div>
 
-      <footer>
-        <p>© 2024 My Portfolio</p>
-      </footer>
+      
       
       {showButton && (
         <button className="back-to-top" onClick={scrollToTop}>
@@ -71,6 +88,10 @@ const ContactMe = () => {
         </button>
       )}
     </div>
+    <footer>
+        <p>© 2024 My Portfolio</p>
+      </footer>
+    </div>  
   );
 };
 

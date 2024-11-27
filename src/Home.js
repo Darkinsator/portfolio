@@ -5,9 +5,25 @@ import { TypeAnimation } from 'react-type-animation';
 import HexagonGrid from './HexagonGrid';
 import './index.css'; // Make sure this includes styles for your content
 import GlowingButton from './GlowingButton';
+import './glitch.css';
 
 
 const Home = () => {
+    
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const phrases = [
+      'I am a Web Developer',
+      'I am an Application Developer',
+      'I am a Full Stack Developer',
+    ];
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+      }, 2000); // Change text every 2 seconds
+  
+      return () => clearInterval(interval); // Cleanup interval on unmount
+    }, [phrases.length]);
 
     useEffect(() => {
         const cursor = document.querySelector('.cursor');
@@ -50,6 +66,7 @@ const Home = () => {
         link.click();
       };
 
+
     return (
        
         <div style={{ position: 'relative' }}>
@@ -59,26 +76,15 @@ const Home = () => {
             <header className="App-header">
                 <h1>My Portfolio</h1>
                 <p>Welcome to my portfolio website!</p>
-                <div className="type-animation-container">
-                    <TypeAnimation
-                        sequence={[
-                            'I am a Web Developer',
-                            2000,
-                            'I am an Application Developer',
-                            2000,
-                            'I am a Full Stack Developer',
-                            2000,
-                        ]}
-                        wrapper="span"
-                        speed={50}
-                        style={{ fontSize: '1.5em', display: 'block', marginTop: '20px', color: '#db1414' }}
-                        repeat={Infinity}
-                    />
+                
+                <div className="glitch-container">
+                     <h1 className="glitch-animation" data-text={phrases[currentIndex]}>
+                       {phrases[currentIndex]}
+                     </h1>
                 </div>
                 <br></br>
             <GlowingButton handleClick={downloadPDF} />   
-                
-                     
+                  
                             
             </header>
             

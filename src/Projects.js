@@ -1,7 +1,7 @@
 import './index.css';
 import HexagonGrid from './HexagonGrid';
 import React, { useState, useEffect } from 'react';
-
+import './glitch.css'
 
 
 
@@ -44,8 +44,8 @@ const Projects = () => {
     return (
         <div>
             <HexagonGrid />
-            <h2>My Projects</h2>
-            
+
+            <h1 className="glitch-animation" data-text="MY PROJECT">MY PROJECTS</h1>
             
             <main>
                 <section className="projects">

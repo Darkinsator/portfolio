@@ -6,8 +6,6 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit:800');  
 
 
-
-
 .picture-links {
   display: flex;
   justify-content: space-around;
@@ -34,6 +32,65 @@
   border-color: #000; /* Border color change on hover */
 }
 
+/*new glitch*/
+.glitch-container {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch {
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: white;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: glitch-animation 1.5s infinite linear;
+}
+
+.glitch::before {
+  left: -2px;
+  text-shadow: 1px 0 #db1414;
+  animation-delay: 0.2s;
+}
+
+.glitch::after {
+  left: 2px;
+  text-shadow: -1px 0 cyan;
+  animation-delay: 0.1s;
+}
+
+@keyframes glitch-animation {
+  0% {
+    clip: rect(0, 900px, 0, 0);
+  }
+  25% {
+    clip: rect(10px, 900px, 20px, 0);
+  }
+  50% {
+    clip: rect(10px, 900px, 5px, 0);
+  }
+  75% {
+    clip: rect(30px, 900px, 20px, 0);
+  }
+  100% {
+    clip: rect(0, 900px, 0, 0);
+  }
+}
 
 
 
@@ -439,13 +496,13 @@ footer {
 }
 
 .contact-me {
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
   
   border-radius: 8px;
   
-  background-image: url('../public/firewallbackground.jpg');
+  /*background-image: url('../public/firewallbackground.jpg');*/
 }
 
 .contact-me h2 {
@@ -466,17 +523,17 @@ footer {
 .contact-me textarea {
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #888;
   border-radius: 4px;
   
   /* Set background color to gray */
-  color: #fff;
+  color: #000;
   /* Set text color to white */
 }
 
 .contact-me input::placeholder,
 .contact-me textarea::placeholder {
-  color: #888;
+  color: #000;
   /* Placeholder text color */
 }
 
@@ -654,8 +711,8 @@ h1 {
 
 .skills-container {
   padding: 20px;
-  background-image: url('../public/firewallbackdiv.jpg');
-  background-color: #f4f4f4;
+  /*background-image: url('../public/firewallbackdiv.jpg');*/
+  
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 1500px;

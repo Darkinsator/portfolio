@@ -1,12 +1,25 @@
 import FlipCard from './FlipCard';
 import './index.css';
 import React, { useState, useEffect } from 'react';
-
-
+import HexagonGrid from './HexagonGrid';
+import './glitch.css'
 
 
 const Skills = () => {
     const skills = ["JavaScript", "React", "CSS", "HTML", "Node.js", "Csharp"];
+
+    useEffect(() => {
+        const cursor = document.querySelector('.cursor');
+        const handleMouseMove = (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
 
     const [showButton, setShowButton] = useState(false);
 
@@ -30,10 +43,14 @@ const Skills = () => {
     }, []);
 
     return (
-        <main>
+        <div>
+
+        <HexagonGrid />
+
             <div className="skills-container">
                 <div>
-                <h2>My Skills</h2>
+                
+                <h1 className="glitch-animation" data-text="MY SKILLS">MY SKILLS</h1>
                 </div><br></br>
                 <div className="skills-grid">
                     {skills.map((skill, index) => (
@@ -50,7 +67,7 @@ const Skills = () => {
                 </button>
             )}
 
-        </main>
+        </div>
     );
 };
 
