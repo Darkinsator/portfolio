@@ -394,7 +394,14 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: transform 0.3s ease;
-  background-image: url('../public/firewallbackground.jpg');
+  background-image: url('../public/frame1.jpg'); /* Set a static image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.project:hover {
+  background-image: url('../public/hexa2.gif'); /* Play GIF on hover */
 }
 
 .project h3 {
