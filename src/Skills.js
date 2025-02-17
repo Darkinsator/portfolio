@@ -6,7 +6,7 @@ import './glitch.css'
 
 
 const Skills = () => {
-    const skills = ["JavaScript", "CSS", "HTML", "Node.js", "Csharp", "React"];
+    const skills = ["JavaScript", "CSS", "HTML", "Node.js", "Csharp", "React1"];
 
     useEffect(() => {
         const cursor = document.querySelector('.cursor');
