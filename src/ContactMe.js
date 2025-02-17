@@ -66,18 +66,16 @@ const ContactMe = () => {
       </form>
       
       <div className="picture-links">
-        <a href="https://www.example2.com" target="_blank" rel="noopener noreferrer">
-          <img src="'/link1.png'" alt="Link 1" />
+        <a href="https://github.com/Darkinsator" target="_blank" rel="noopener noreferrer">
+          <img src="/github2.png" alt="Link 1" />
         </a>
-        <a href="https://www.example2.com" target="_blank" rel="noopener noreferrer">
-          <img src="link-to-image2.jpg" alt="Link 2" />
+        <a href="https://www.linkedin.com/in/jason-blankenberg" target="_blank" rel="noopener noreferrer">
+          <img src="/linkedin.png" alt="Link 2" />
         </a>
-        <a href="https://www.example3.com" target="_blank" rel="noopener noreferrer">
-          <img src="link-to-image3.jpg" alt="Link 3" />
+        <a href="/JASONBLANKENBERGCV.pdf" download="JASONBLANKENBERGCV.pdf">
+          <img src="/cv.png" alt="Download CV" />
         </a>
-        <a href="https://www.example4.com" target="_blank" rel="noopener noreferrer">
-          <img src="link-to-image4.jpg" alt="Link 4" />
-        </a>
+        
       </div>
 
       
