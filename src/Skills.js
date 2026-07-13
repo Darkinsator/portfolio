@@ -63,7 +63,7 @@ const Skills = () => {
             </footer>
             {showButton && (
                 <button className="back-to-top" onClick={scrollToTop}>
-                    <img src="/linkarrow.png" alt="Back to Top" />
+                    <img src={`${process.env.PUBLIC_URL}/linkarrow.png`} alt="Back to Top" />
                 </button>
             )}
 

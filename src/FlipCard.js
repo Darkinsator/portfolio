@@ -16,14 +16,14 @@ const FlipCard = ({ skill }) => {
         <div className={`flip-card ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
             <div className="flip-card-inner">
                 <div className="flip-card-front">
-                    <img src="/Back Card.png" alt="Card Back" />
+                    <img src={`${process.env.PUBLIC_URL}/Back Card.png`} alt="Card Back" />
                 </div>
                 <div className="flip-card-back">
-                    <img src={`/${skill}.jpeg`} alt={`${skill} Card`} />
+                    <img src={`${process.env.PUBLIC_URL}/${skill}.jpeg`} alt={`${skill} Card`} />
                 </div>
             </div>
         </div>
-    );
+    )
 };
 
 export default FlipCard;

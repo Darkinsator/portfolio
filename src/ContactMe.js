@@ -67,13 +67,13 @@ const ContactMe = () => {
       
       <div className="picture-links">
         <a href="https://github.com/Darkinsator" target="_blank" rel="noopener noreferrer">
-          <img src="/github2.png" alt="Link 1" />
+          <img src={`${process.env.PUBLIC_URL}/github2.png`} alt="Link 1" />
         </a>
         <a href="https://www.linkedin.com/in/jason-blankenberg" target="_blank" rel="noopener noreferrer">
-          <img src="/linkedin.png" alt="Link 2" />
+          <img src={`${process.env.PUBLIC_URL}/linkedin.png`} alt="Link 2" />
         </a>
-        <a href="/JASONBLANKENBERGCV.pdf" download="JASONBLANKENBERGCV.pdf">
-          <img src="/cv.png" alt="Download CV" />
+        <a href={`${process.env.PUBLIC_URL}/JASONBLANKENBERGCV.pdf`} download="JASONBLANKENBERGCV.pdf">
+          <img src={`${process.env.PUBLIC_URL}/cv.png`} alt="Download CV" />
         </a>
         
       </div>
@@ -82,7 +82,7 @@ const ContactMe = () => {
       
       {showButton && (
         <button className="back-to-top" onClick={scrollToTop}>
-          <img src="/linkarrow.png" alt="Back to Top" />
+          <img src={`${process.env.PUBLIC_URL}/linkarrow.png`} alt="Back to Top" />
         </button>
       )}
     </div>

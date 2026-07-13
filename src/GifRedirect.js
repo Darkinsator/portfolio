@@ -15,7 +15,7 @@ const GifRedirect = () => {
 
   return (
     <div className="gif-container">
-      <img className="full-screen-gif" src="/throwingflashbeng.gif" alt="Loading..." />
+      <img className="full-screen-gif" src={`${process.env.PUBLIC_URL}/throwingflashbeng.gif`} alt="Loading..." />
     </div>
   );
 };

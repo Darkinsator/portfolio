@@ -5,8 +5,8 @@ import './glitch.css'
 
 
 
-
 const AboutMe = () => {
+
 
   useEffect(() => {
     const cursor = document.querySelector('.cursor');
@@ -48,7 +48,10 @@ const AboutMe = () => {
       <h1 className="glitch-animation" data-text="ABOUT ME"> ABOUT ME</h1>
       <p>Hello! I'm Jason Blankenberg, a passionate developer with experience in web and mobile applications...</p>
       <div className="sized">
-        <img src="/profilePhoto.jpeg" alt="Back to Top" />
+        <img
+          src={`${process.env.PUBLIC_URL}/profilePhoto.jpeg`}
+          alt="Profile"
+        />
       </div>
 
       {/* Add more about me content here */}
@@ -77,7 +80,7 @@ const AboutMe = () => {
       </footer>
       {showButton && (
                 <button className="back-to-top" onClick={scrollToTop}>
-                    <img src="/linkarrow.png" alt="Back to Top" />
+                    <img src={`${process.env.PUBLIC_URL}/linkarrow.png`} alt="Back to Top" />
                 </button>
             )}
     </div>

@@ -16,12 +16,16 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <h1 className="navbarheader" data-text="JASON BLANKENBERG">JASON BLANKENBERG</h1>
+        
         <div className="links">
           <Link className="goldman" to="/">Home</Link>
           <Link className="goldman" to="/about">About Me</Link>
           <Link className="goldman" to="/projects">Projects</Link>
           <Link className="goldman" to="/contact">Contact Me</Link> 
           <Link className="goldman" to="/skills">Skills</Link>
+        </div>
+        <div className="gif-button" onClick={handleGifClick}>
+          <img src={`${process.env.PUBLIC_URL}/tech.png`} alt="Throwing Flashbang" />
         </div>
       </nav>
       {showGif && (
